@@ -24,7 +24,7 @@ Este é um projeto inicial de CRUD (Create, Read, Update, Delete),que será expa
 
 Retorna a lista completa de carros disponíveis.
 
-#### EXemplo de Resposta:
+#### Exemplo de Resposta:
 
 ```json
 [
