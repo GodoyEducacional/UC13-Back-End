@@ -29,6 +29,10 @@ app.get('/:sigla', (requisicao, resposta) => {
 
 app.post('/', (req, res) => {
     const novoCarro = req.body; // Obtém o corpo enviado para incluir um carro
+    const carroExiste = carros2024.find(carro => carro.sigla === novoCarro.sigla);
+    if (carroExiste) {
+        return res.status(400).send('Já existe um carro cadastrado com essa sigla!');
+    }
     // JOI
     const { error } = modeloCarro.validate(novoCarro);
     if (error) {
