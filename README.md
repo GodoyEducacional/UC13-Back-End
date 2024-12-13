@@ -37,5 +37,122 @@ Retorna a lista completa de carros disponíveis.
     "aceleracao": 2.9,
     "preco": 300000
   },
+  {
+    "nome": "Lamborghini",
+    "sigla": "LAM",
+    "velocidadeMaxima": 355,
+    "potencia": 770,
+    "consumo": 6.2,
+    "aceleracao": 2.8,
+    "preco": 330000
+  }
 ]
+```
+### 2. **GET /:sigla**
+
+Retorna as informações de um carro específico, identifado pela sigla.
+
+### Exemplo de Requisição:
+
+`GET /FER`
+
+### Exemplo de Resposta:
+
+```json
+{
+    "nome": "Ferrari",
+    "sigla": "FER",
+    "velocidadeMaxima": 340,
+    "potencia": 800,
+    "consumo": 5.5,
+    "aceleracao": 2.9,
+    "preco": 300000
+}
+```
+### 3. **POST /**
+
+Adiciona um novo carro à lista.
+
+#### Exemplo de Requisição:
+
+`POST \`
+
+**Content-Type:** application/json
+
+```json
+{
+    "nome": "BMW",
+    "sigla": "BMW",
+    "velocidadeMaxima": 200,
+    "potencia": 500,
+    "consumo": 7.5,
+    "aceleracao": 4.0,
+    "preco": 1200000  
+}
+```
+
+#### Exemplo de Resposta:
+
+```json
+{
+    "nome": "BMW",
+    "sigla": "BMW",
+    "velocidadeMaxima": 200,
+    "potencia": 500,
+    "consumo": 7.5,
+    "aceleracao": 4.0,
+    "preco": 1200000  
+}
+```
+
+### 4. **PUT /:sigla**
+
+Atualiza as informações de um carro específico.
+
+#### Exemplo de Requisição:
+
+`PUT /BMW`
+
+**Content-Type:** application/json
+
+```json
+{
+  "preco": 130000
+}
+```
+
+#### Exemplo de resposta:
+
+```json
+{
+    "nome": "BMW",
+    "sigla": "BMW",
+    "velocidadeMaxima": 200,
+    "potencia": 500,
+    "consumo": 7.5,
+    "aceleracao": 4.0,
+    "preco": 130000
+}
+```
+
+### 5. **DELETE /:sigla**
+
+Remove um carro específico pela sigla.
+
+#### Exemplo de Requisição:
+
+`DELETE /BMW`
+
+#### Exemplo de Resposta:
+
+```json
+{
+    "nome": "BMW",
+    "sigla": "BMW",
+    "velocidadeMaxima": 200,
+    "potencia": 500,
+    "consumo": 7.5,
+    "aceleracao": 4.0,
+    "preco": 130000
+}
 ```
